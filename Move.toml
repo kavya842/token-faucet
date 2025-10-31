@@ -6,7 +6,4 @@ version = "1.0.0"
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
 
 [addresses]
-faucet = "_"
-
-[dev-addresses]
-faucet = "0x1"
+faucet = "0x0"
