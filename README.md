@@ -2,7 +2,7 @@ Token Faucet Project – Sui Blockchain
 A simple token faucet smart contract on the Sui blockchain that distributes test tokens to users.
 Each address can claim tokens only once — ensuring fair distribution.
 
-🚀 Deployment Information
+ Deployment Information
 Network: Sui Testnet
 Package ID: 0xe07d674480b04728ccb77946ec992b8b05892a704f5f43f0a69ea74ba91f70e
 Deployed On: October 31, 2025
@@ -11,14 +11,14 @@ Status: ✅ Live on Testnet
 Shared Faucet Object
 Object ID: 0xdc795667797106c33db7ce702b6499dbf08b42954ff53c7f444474e7824eb929
 
-🎯 Expected Output
+Expected Output
 Users can call claim() and receive 100 SUI
 
 Attempting to claim twice should fail
 
 Events are emitted for each claim and token addition
 
-✅ Test Cases to Implement
+ Test Cases to Implement
 User claims successfully
 → Verifies that a user can claim 100 SUI from the faucet.
 
@@ -29,9 +29,7 @@ Multiple users claim
 → Confirms multiple unique users can each claim once.
 
 Admin adds more tokens
-→ Validates admin function for refilling the faucet balance.
-
-🧩 Features
+→ Validates admin function for refilling the faucet balance.Features
 One-time claim per address
 
 Fixed token distribution: 100 SUI per claim
@@ -42,7 +40,7 @@ Admin control: Add more tokens anytime
 
 Shared object design: Allows multiple users to interact safely
 
-📁 Project Structure
+Project Structure
 text
 token-faucet/
 ├── Move.toml                      # Package configuration
@@ -51,7 +49,7 @@ token-faucet/
 ├── tests/
 │   └── token_faucet_tests.move    # Unit tests for faucet functionality
 └── README.md                      # Project documentation
-⚙️ Contract Overview
+ Contract Overview
 Constants
 Constant	Value	Description
 CLAIM_AMOUNT	100_000_000_000 MIST	Equivalent to 100 SUI
@@ -63,7 +61,7 @@ Events
 Event	Trigger	Description
 TokensClaimed	On successful claim	Emitted with claimer address and amount
 TokensAdded	On admin token addition	Emitted with added amount and faucet balance
-🧪 Testing Focus
+ Testing Focus
 All test cases are written in tests/token_faucet_tests.move.
 
 Key Scenarios:
@@ -103,54 +101,31 @@ sui.exe client call \
   --gas-budget 10000000
 Expected Transaction Output
 Status: Success
-
 Gas Used: ~0.001-0.01 SUI
-
 Events: TokensClaimed event with claimer address and amount
-
-🔐 Security & Safety
+Security & Safety
 Claim tracking: Prevents double claims
-
 Balance validation: Rejects claims if faucet balance is insufficient
-
 Event transparency: Provides clear on-chain traceability
-
 Admin-only operations: Restricted token top-ups
-
-📘 Learning Highlights
+Learning Highlights
 This project demonstrates several core Sui Move concepts:
-
 Shared Objects – Global faucet accessible by all users
-
 Tables – Tracking claimed addresses efficiently
-
 Event Emission – Logging on-chain actions
-
 Access Control – Role-based function restrictions
-
 Balance Management – Handling and distributing tokens safely
-
-🌐 Explorer Links
+Explorer Links
 View on Sui Explorer:
-
 Package
-
 Faucet Object
-
-📜 License
+. License
 This project was built for educational purposes as part of a hackathon.
 Feel free to modify, extend, and improve it!
-
-🎉 Ready for Hackathon!
+Ready for Hackathon!
 Your token faucet is ready! Users can now:
-
 Visit your faucet on Sui Testnet
-
-Claim their 100 SUI (once per address)
-
+Claim their 100 SUI once per address
 Use tokens for testing
-
-Deployment Complete! ✅
-Good luck with your hackathon! 🏆
-
-Built with ❤️ on Sui Blockchain
+Deployment Complete!
+Built with  on Sui Blockchain
